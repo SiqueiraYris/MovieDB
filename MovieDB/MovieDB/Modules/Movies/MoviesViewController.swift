@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MoviesViewController.swift
 //  MovieDB
 //
 //  Created by Yris Siqueira da Silva on 19/12/19.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class MoviesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
 }
-
