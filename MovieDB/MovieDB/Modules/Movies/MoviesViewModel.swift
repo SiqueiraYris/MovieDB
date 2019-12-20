@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+protocol MoviesViewModelProtocol {
+    func presentMovieDetail()
+}
+
+final class MoviesViewModel: MoviesViewModelProtocol {
+    
+    // MARK: - Attributes
+    
+    private var coordinator: MoviesCoordinator?
+    
+    // MARK: - Life cycle
+    
+    init(coordinator: MoviesCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    // MARK: - Navigation
+
+    func presentMovieDetail() {
+        coordinator?.presentMovieDetail()
+    }
+    
+}
