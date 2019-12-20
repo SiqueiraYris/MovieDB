@@ -21,6 +21,7 @@
 		4E14B01923ACFBED006F973F /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14B01823ACFBED006F973F /* MovieDetailViewModel.swift */; };
 		4E14B01C23ACFBFA006F973F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14B01A23ACFBFA006F973F /* MovieDetailViewController.swift */; };
 		4E14B01D23ACFBFA006F973F /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E14B01B23ACFBFA006F973F /* MovieDetailViewController.xib */; };
+		4E14B02023AD013F006F973F /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14B01F23AD013E006F973F /* MoviesInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4E14B01823ACFBED006F973F /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		4E14B01A23ACFBFA006F973F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4E14B01B23ACFBFA006F973F /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		4E14B01F23AD013E006F973F /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				4E14B00823AC4DC9006F973F /* MoviesViewModel.swift */,
 				4E14B00A23AC4DDD006F973F /* MoviesViewController.swift */,
 				4E14B00B23AC4DDD006F973F /* MoviesViewController.xib */,
+				4E14B01F23AD013E006F973F /* MoviesInteractor.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4E14B01223AC4F1A006F973F /* Coordinator.swift in Sources */,
 				4E14B00723AC4DBE006F973F /* MoviesCoordinator.swift in Sources */,
 				4E14AFD023AC47DB006F973F /* AppDelegate.swift in Sources */,
+				4E14B02023AD013F006F973F /* MoviesInteractor.swift in Sources */,
 				4E14B00923AC4DC9006F973F /* MoviesViewModel.swift in Sources */,
 				4E14B01923ACFBED006F973F /* MovieDetailViewModel.swift in Sources */,
 				4E14B00C23AC4DDD006F973F /* MoviesViewController.swift in Sources */,
