@@ -26,6 +26,7 @@
 		4E14B03623AD2C37006F973F /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14B03523AD2C37006F973F /* URLRequest+Extensions.swift */; };
 		4E14B03823AD2D0A006F973F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E14B03723AD2D0A006F973F /* API.swift */; };
 		68BE6351582881BC853055AE /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5267C28676E5488AE7430166 /* Pods_MovieDB.framework */; };
+		C788BC7C23B2FFBE00107139 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788BC7B23B2FFBE00107139 /* MoviesResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		4E14B03723AD2D0A006F973F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5267C28676E5488AE7430166 /* Pods_MovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCED4A24FEA956694A8A8F2 /* Pods-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.debug.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
+		C788BC7B23B2FFBE00107139 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
 		DA53B9C06F5E06077785158F /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4E14B03723AD2D0A006F973F /* API.swift */,
+				C788BC7B23B2FFBE00107139 /* MoviesResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				4E14B01223AC4F1A006F973F /* Coordinator.swift in Sources */,
 				4E14B00723AC4DBE006F973F /* MoviesCoordinator.swift in Sources */,
 				4E14AFD023AC47DB006F973F /* AppDelegate.swift in Sources */,
+				C788BC7C23B2FFBE00107139 /* MoviesResponse.swift in Sources */,
 				4E14B02023AD013F006F973F /* MoviesInteractor.swift in Sources */,
 				4E14B00923AC4DC9006F973F /* MoviesViewModel.swift in Sources */,
 				4E14B02E23AD14E2006F973F /* Movie.swift in Sources */,

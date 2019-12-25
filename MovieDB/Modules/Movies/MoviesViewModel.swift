@@ -8,8 +8,20 @@
 
 import Foundation
 
+// MARK: - View Model Protocol
+
 protocol MoviesViewModelProtocol {
+    var movies: [Movie] { get }
+    var delegate: MoviesViewModelDelegate? { get set }
+
     func presentMovieDetail()
+    func fetchMovies()
+}
+
+// MARK: - View Model Delegate
+
+protocol MoviesViewModelDelegate {
+    func fetchMovies(error: Error?)
 }
 
 final class MoviesViewModel: MoviesViewModelProtocol {
@@ -19,7 +31,10 @@ final class MoviesViewModel: MoviesViewModelProtocol {
     private var coordinator: MoviesCoordinator?
     private let interactor: MoviesInteractorProtocol
     
-    // MARK: - Life cycle
+    var movies: [Movie] = []
+    var delegate: MoviesViewModelDelegate?
+    
+    // MARK: - Life Cycle
     
     init(coordinator: MoviesCoordinator, interactor: MoviesInteractorProtocol = MoviesInteractor()) {
         self.coordinator = coordinator
@@ -33,10 +48,18 @@ final class MoviesViewModel: MoviesViewModelProtocol {
     }
     
     
-    // MARK: - Custom methods
+    // MARK: - Custom Methods
     
     func fetchMovies() {
-        interactor.fetchMovies()
+        interactor.fetchMoviesFromPage { result in
+            switch result {
+            case .success(let movieList):
+                self.movies.append(contentsOf: movieList)
+                self.delegate?.fetchMovies(error: nil)
+            case .failure(let error):
+                self.delegate?.fetchMovies(error: error)
+            }
+        }
     }
     
 }

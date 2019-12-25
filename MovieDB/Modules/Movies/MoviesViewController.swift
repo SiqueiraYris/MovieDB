@@ -15,19 +15,39 @@ final class MoviesViewController: UIViewController {
     private var viewModel: MoviesViewModelProtocol?
 
     
-    // MARK: - Life cycle
+    // MARK: - Life Cycle
     
     init(viewModel: MoviesViewModelProtocol) {
-        self.viewModel = viewModel
         super.init(nibName: "MoviesViewController", bundle: Bundle.main)
+        self.viewModel = viewModel
+        self.viewModel?.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel?.fetchMovies()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+}
+
+// MARK: - View Model Delegate
+
+extension MoviesViewController: MoviesViewModelDelegate {
+    
+    func fetchMovies(error: Error?) {
+        if let err = error {
+            
+        } else {
+            
+        }
     }
     
 }
