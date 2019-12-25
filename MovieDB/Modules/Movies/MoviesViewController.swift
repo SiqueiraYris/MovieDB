@@ -13,7 +13,16 @@ final class MoviesViewController: UIViewController {
     // MARK: - Attributes
     
     private var viewModel: MoviesViewModelProtocol?
+    
+    // MARK: - Outlets
 
+    @IBOutlet weak var moviesTableView: UITableView! {
+        didSet {
+            moviesTableView.dataSource = self
+            moviesTableView.delegate = self
+            moviesTableView.register(UINib(nibName: MoviesTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MoviesTableViewCell.identifier)
+        }
+    }
     
     // MARK: - Life Cycle
     
@@ -46,8 +55,50 @@ extension MoviesViewController: MoviesViewModelDelegate {
         if let err = error {
             
         } else {
-            
+            DispatchQueue.main.async {
+                self.moviesTableView.reloadData()
+            }
         }
     }
+    
+}
+
+// MARK: - Table View Data Source
+
+extension MoviesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.movies.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: MoviesTableViewCell.identifier, for: indexPath) as? MoviesTableViewCell, let movies = viewModel?.movies {
+            let cellViewModel = MoviesCellViewModel(with: movies[indexPath.row])
+            cell.configure(with: cellViewModel)
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+}
+
+// MARK: - Table View Delegate
+
+extension MoviesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        159.8
+    }
+    
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.backgroundColor = UIColor.clear
+//        return headerView
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        11.2
+//    }
     
 }
