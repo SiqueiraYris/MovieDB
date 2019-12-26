@@ -40,14 +40,14 @@
                         <constraint firstAttribute="height" constant="198" id="cmv-VH-By6"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieTitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-3D-ItI">
-                    <rect key="frame" x="159.5" y="216" width="244.5" height="41"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieTitle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLz-3D-ItI">
+                    <rect key="frame" x="159.5" y="184" width="244.5" height="41"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieDuration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRE-OJ-SiA">
-                    <rect key="frame" x="160" y="259" width="114" height="17"/>
+                    <rect key="frame" x="160" y="227" width="114" height="17"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMP-nP-3o3">
-                    <rect key="frame" x="356" y="270" width="46" height="48"/>
+                    <rect key="frame" x="356" y="238" width="46" height="48"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieRating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-Xb-Dli">
                             <rect key="frame" x="-51.5" y="11" width="149.5" height="26.5"/>
@@ -105,7 +105,7 @@
             <color key="backgroundColor" red="0.015686274509803921" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rqb-Gm-otu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="2dd-3c-1ww"/>
-                <constraint firstItem="xLz-3D-ItI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="172" id="3wx-xm-Dd9"/>
+                <constraint firstItem="xLz-3D-ItI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="140" id="3wx-xm-Dd9"/>
                 <constraint firstItem="tRE-OJ-SiA" firstAttribute="top" secondItem="xLz-3D-ItI" secondAttribute="bottom" constant="2" id="7NX-Cs-PZ0"/>
                 <constraint firstItem="Dz2-FR-AA6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-16" id="8NP-f3-heJ"/>
                 <constraint firstItem="cbz-FT-60Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B9G-kD-wgR"/>

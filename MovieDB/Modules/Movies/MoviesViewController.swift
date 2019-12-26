@@ -69,10 +69,10 @@ final class MoviesViewController: UIViewController {
 extension MoviesViewController: MoviesViewModelDelegate {
     
     func fetchMovies(error: Error?) {
-        if let err = error {
-            
-        } else {
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            if let err = error {
+                self.showErrorAlert(error: err)
+            } else {
                 self.moviesTableView.reloadData()
             }
         }

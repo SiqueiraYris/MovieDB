@@ -68,10 +68,10 @@ final class MovieDetailViewController: UIViewController {
 extension MovieDetailViewController: MovieDetailViewModelDelegate {
     
     func fetchMovieDetail(error: Error?) {
-        if let err = error {
-            
-        } else {
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            if let err = error {
+                self.showErrorAlert(error: err)
+            } else {
                 self.setupUI()
             }
         }

@@ -16,7 +16,10 @@ extension UIView {
         self.layer.cornerRadius = radious
         self.layer.masksToBounds = true
     }
-    
+
+}
+
+extension UIView {
     
     // MARK: - Gradient Background
     

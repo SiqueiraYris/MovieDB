@@ -39,6 +39,7 @@
 		C7BEF9D023B48F840058A377 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9CF23B48F840058A377 /* Date+Extensions.swift */; };
 		C7BEF9D223B531570058A377 /* MovieImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9D123B531570058A377 /* MovieImages.swift */; };
 		C7BEF9D423B531ED0058A377 /* Backdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9D323B531ED0058A377 /* Backdrop.swift */; };
+		C7BEF9D823B53C940058A377 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9D723B53C940058A377 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		C7BEF9CF23B48F840058A377 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		C7BEF9D123B531570058A377 /* MovieImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImages.swift; sourceTree = "<group>"; };
 		C7BEF9D323B531ED0058A377 /* Backdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backdrop.swift; sourceTree = "<group>"; };
+		C7BEF9D723B53C940058A377 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DA53B9C06F5E06077785158F /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +246,7 @@
 				C7BEF9C523B462A60058A377 /* UIImageView+Extensions.swift */,
 				C7BEF9CD23B476010058A377 /* UIColor+Extensions.swift */,
 				C7BEF9CF23B48F840058A377 /* Date+Extensions.swift */,
+				C7BEF9D723B53C940058A377 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			files = (
 				4E14B01223AC4F1A006F973F /* Coordinator.swift in Sources */,
 				4E14B00723AC4DBE006F973F /* MoviesCoordinator.swift in Sources */,
+				C7BEF9D823B53C940058A377 /* UIViewController+Extensions.swift in Sources */,
 				C7BEF9D223B531570058A377 /* MovieImages.swift in Sources */,
 				4E14AFD023AC47DB006F973F /* AppDelegate.swift in Sources */,
 				C788BC8323B3FA7B00107139 /* MoviesCellViewModel.swift in Sources */,
