@@ -6,7 +6,6 @@
 //  Copyright © 2019 Yris Siqueira da Silva. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 final class MoviesCoordinator: Coordinator {
@@ -15,7 +14,7 @@ final class MoviesCoordinator: Coordinator {
     
     private weak var navigationController: UINavigationController?
     
-    // MARK: - Life cycle
+    // MARK: - Life Cycle
     
     init(presenter: UINavigationController) {
         navigationController = presenter
@@ -26,6 +25,9 @@ final class MoviesCoordinator: Coordinator {
         let viewController = MoviesViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    
+    // MARK: - Navigations
     
     func presentMovieDetail(movieId: Int) {
         let moviesCoordinator = MovieDetailCoordinator(presenter: navigationController, movieId: movieId)

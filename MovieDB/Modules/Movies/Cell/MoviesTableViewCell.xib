@@ -36,32 +36,56 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieOverview" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-3U-HXQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="--movieOverview" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOX-DW-USc">
                                 <rect key="frame" x="121.5" y="78" width="196" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieReleaseDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7t-e7-S7Z">
                                 <rect key="frame" x="175" y="143" width="141" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTM-Lw-k8Q">
+                                <rect key="frame" x="273.5" y="13" width="44" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieRating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyU-v0-khd">
+                                        <rect key="frame" x="-33.5" y="4.5" width="111.5" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="gOs-Jc-9cs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.83137254901960778" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iyU-v0-khd" firstAttribute="centerX" secondItem="wTM-Lw-k8Q" secondAttribute="centerX" id="0d7-NZ-Pr8"/>
+                                    <constraint firstItem="iyU-v0-khd" firstAttribute="centerY" secondItem="wTM-Lw-k8Q" secondAttribute="centerY" id="Ph8-LC-ylt"/>
+                                    <constraint firstAttribute="width" constant="44" id="VgJ-r7-H8p"/>
+                                    <constraint firstAttribute="height" constant="25" id="zHH-Wu-DEs"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="j7t-e7-S7Z" secondAttribute="bottom" constant="9.8000000000000007" id="05j-Or-Fhw"/>
                             <constraint firstAttribute="trailing" secondItem="j7t-e7-S7Z" secondAttribute="trailing" constant="12" id="09c-e5-TZX"/>
-                            <constraint firstAttribute="trailing" secondItem="ahm-3U-HXQ" secondAttribute="trailing" constant="10.31" id="7tH-O1-dI1"/>
-                            <constraint firstAttribute="bottom" secondItem="ahm-3U-HXQ" secondAttribute="bottom" constant="36" id="ABx-Bi-yop"/>
+                            <constraint firstAttribute="trailing" secondItem="BOX-DW-USc" secondAttribute="trailing" constant="10.31" id="2HY-vu-x2R"/>
                             <constraint firstItem="t8C-eN-EF0" firstAttribute="top" secondItem="Uz9-bB-lnb" secondAttribute="top" constant="10" id="H8b-nL-EjO"/>
+                            <constraint firstItem="BOX-DW-USc" firstAttribute="leading" secondItem="t8C-eN-EF0" secondAttribute="trailing" constant="19" id="LLk-Ks-30p"/>
                             <constraint firstAttribute="trailing" secondItem="wlg-4M-oCJ" secondAttribute="trailing" constant="92" id="XFD-hS-Vs2"/>
                             <constraint firstItem="wlg-4M-oCJ" firstAttribute="top" secondItem="Uz9-bB-lnb" secondAttribute="top" constant="15" id="Xk0-Jp-UfQ"/>
-                            <constraint firstItem="ahm-3U-HXQ" firstAttribute="top" secondItem="wlg-4M-oCJ" secondAttribute="bottom" constant="5" id="eeG-2z-gjj"/>
+                            <constraint firstItem="wTM-Lw-k8Q" firstAttribute="top" secondItem="Uz9-bB-lnb" secondAttribute="top" constant="13" id="Yni-sJ-2vy"/>
+                            <constraint firstAttribute="bottom" secondItem="BOX-DW-USc" secondAttribute="bottom" constant="36" id="ZWH-MB-XgP"/>
+                            <constraint firstItem="BOX-DW-USc" firstAttribute="top" secondItem="wlg-4M-oCJ" secondAttribute="bottom" constant="5" id="cVH-UP-7pV"/>
                             <constraint firstItem="t8C-eN-EF0" firstAttribute="leading" secondItem="Uz9-bB-lnb" secondAttribute="leading" constant="9.6199999999999992" id="ff9-EC-0Tj"/>
                             <constraint firstItem="wlg-4M-oCJ" firstAttribute="leading" secondItem="t8C-eN-EF0" secondAttribute="trailing" constant="19" id="gVe-2N-7gx"/>
-                            <constraint firstItem="ahm-3U-HXQ" firstAttribute="leading" secondItem="t8C-eN-EF0" secondAttribute="trailing" constant="19" id="ypt-oR-InI"/>
+                            <constraint firstAttribute="trailing" secondItem="wTM-Lw-k8Q" secondAttribute="trailing" constant="10.31" id="jl9-a1-JDK"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -78,7 +102,9 @@
             <connections>
                 <outlet property="movieContentView" destination="Uz9-bB-lnb" id="f4Q-3a-8FG"/>
                 <outlet property="movieImage" destination="t8C-eN-EF0" id="XSu-BP-v7S"/>
-                <outlet property="movieOverview" destination="ahm-3U-HXQ" id="pvk-Ax-A5n"/>
+                <outlet property="movieOverview" destination="BOX-DW-USc" id="4sA-5s-pLw"/>
+                <outlet property="movieRating" destination="iyU-v0-khd" id="3Ek-p6-5sm"/>
+                <outlet property="movieRatingView" destination="wTM-Lw-k8Q" id="GDL-SA-YAj"/>
                 <outlet property="movieReleaseDate" destination="j7t-e7-S7Z" id="a3H-nQ-pUq"/>
                 <outlet property="movieTitle" destination="wlg-4M-oCJ" id="US9-55-Brb"/>
             </connections>

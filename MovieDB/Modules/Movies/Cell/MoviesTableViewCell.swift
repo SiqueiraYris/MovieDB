@@ -18,9 +18,11 @@ class MoviesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieOverview: UILabel!
+    @IBOutlet weak var movieOverview: UITextView!
     @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var movieContentView: UIView!
+    @IBOutlet weak var movieRatingView: UIView!
+    @IBOutlet weak var movieRating: UILabel!
     
     // MARK: - Initializers
     
@@ -28,10 +30,15 @@ class MoviesTableViewCell: UITableViewCell {
         movieTitle.text = viewModel.movieTitle
         movieOverview.text = viewModel.movieOverview
         movieReleaseDate.text = viewModel.movieRelease
+        movieRating.text = viewModel.movieRating
+        
         movieImage.download(image: viewModel.movieImage)
+        movieImage.addRoundedBorder(radious: 5.0, color: UIColor.caribbeanGreen.cgColor)
         
         movieContentView.roundCorners(radious: 5.0)
-//        scoreLabel.text = viewModel.movieRating
+        movieRatingView.roundCorners(radious: 5.0)
+        
+        self.selectionStyle = .none
     }
     
 }

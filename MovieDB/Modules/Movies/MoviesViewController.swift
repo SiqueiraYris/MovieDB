@@ -49,6 +49,8 @@ final class MoviesViewController: UIViewController {
         setupNavigation()
     }
     
+    // MARK: - Custom Methods
+    
     func setupNavigation() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = false

@@ -16,8 +16,7 @@ class MoviesCellViewModel {
     let movieRelease: String!
     let movieTitle: String!
     let movieOverview: String!
-//    let movieRating: String!
-//    let movieRatingValue: Double!
+    let movieRating: String!
 
     // MARK: - Initializers
     
@@ -25,9 +24,8 @@ class MoviesCellViewModel {
         movieImage = movie.posterPath
         movieTitle = movie.title
         movieOverview = movie.overview
+        movieRating = movie.voteAverage.description
         movieRelease = movie.releaseDate.prefix(4).description
-//        movieRating = movie.voteAverage.description
-//        movieRatingValue = movie.voteAverage
     }
 
 }
