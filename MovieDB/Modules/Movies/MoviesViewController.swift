@@ -108,8 +108,21 @@ extension MoviesViewController: UITableViewDelegate {
         171
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentSize = scrollView.contentSize.height
+        let currentScrollPosition = scrollView.contentOffset.y
+
+        if currentScrollPosition > currentSize * 0.8 {
+            DispatchQueue.global(qos: .background).async {
+                if let viewModel = self.viewModel {
+                    viewModel.fetchMovies()
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.presentMovieDetail(at: indexPath.row)
     }
-
+    
 }
