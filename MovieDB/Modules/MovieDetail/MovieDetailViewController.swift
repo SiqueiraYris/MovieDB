@@ -26,6 +26,7 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieRating: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var movieImages: ImageSlideshow!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     // MARK: - Life Cycle
     
@@ -42,6 +43,7 @@ final class MovieDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         viewModel?.fetchMovieDetail()
+        setupUI(hidden: true)
     }
     
     override func viewDidLoad() {
@@ -72,8 +74,10 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
             if let err = error {
                 self.showErrorAlert(error: err)
             } else {
-                self.setupUI()
+                self.bindUI()
+                self.setupUI(hidden: false)
             }
+            self.loader.stopAnimating()
         }
     }
     
@@ -81,9 +85,21 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
 
 extension MovieDetailViewController {
     
+    // MARK: - Setup UI
+    
+    func setupUI(hidden: Bool) {
+        movieTitle.isHidden = hidden
+        movieOverview.isHidden = hidden
+        movieRatingView.isHidden = hidden
+        movieBanner.isHidden = hidden
+        movieMainImage.isHidden = hidden
+        movieDuration.isHidden = hidden
+        movieImages.isHidden = hidden
+    }
+    
     // MARK: - Binds
     
-    func setupUI() {
+    func bindUI() {
         movieTitle.text = viewModel?.movie.title
         movieOverview.text = viewModel?.movie.overview
         movieRating.text = viewModel?.movie.voteAverage.description

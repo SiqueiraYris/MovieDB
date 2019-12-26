@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieDB" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="rqb-Gm-otu" id="S01-Od-7Qg"/>
+                <outlet property="loader" destination="ZxK-Xo-hUg" id="YV8-xY-Efb"/>
                 <outlet property="movieBanner" destination="Dz2-FR-AA6" id="rDd-5J-imM"/>
                 <outlet property="movieDuration" destination="tRE-OJ-SiA" id="oFK-z3-Vuq"/>
                 <outlet property="movieImages" destination="cbz-FT-60Z" id="vr4-Vu-E72"/>
@@ -101,6 +102,10 @@
                         <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="2EF-T6-Iwa"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZxK-Xo-hUg">
+                    <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.015686274509803921" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -108,6 +113,7 @@
                 <constraint firstItem="xLz-3D-ItI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="140" id="3wx-xm-Dd9"/>
                 <constraint firstItem="tRE-OJ-SiA" firstAttribute="top" secondItem="xLz-3D-ItI" secondAttribute="bottom" constant="2" id="7NX-Cs-PZ0"/>
                 <constraint firstItem="Dz2-FR-AA6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-16" id="8NP-f3-heJ"/>
+                <constraint firstItem="ZxK-Xo-hUg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8dQ-0t-Yam"/>
                 <constraint firstItem="cbz-FT-60Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B9G-kD-wgR"/>
                 <constraint firstItem="nMP-nP-3o3" firstAttribute="top" secondItem="xLz-3D-ItI" secondAttribute="bottom" constant="13" id="EQa-WX-ElV"/>
                 <constraint firstItem="rqb-Gm-otu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="IWZ-Ey-8KE"/>
@@ -122,6 +128,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xLz-3D-ItI" secondAttribute="trailing" constant="10" id="ZRD-Oz-VHM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bs9-rB-y4M" secondAttribute="trailing" constant="15" id="cTf-Rb-iZ4"/>
                 <constraint firstItem="tRE-OJ-SiA" firstAttribute="leading" secondItem="2IH-xk-z8o" secondAttribute="trailing" constant="12" id="ebI-uO-Gmf"/>
+                <constraint firstItem="ZxK-Xo-hUg" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="khq-A2-y3z"/>
                 <constraint firstItem="cbz-FT-60Z" firstAttribute="top" secondItem="bs9-rB-y4M" secondAttribute="bottom" constant="10" id="lEh-aF-g7i"/>
                 <constraint firstItem="xLz-3D-ItI" firstAttribute="leading" secondItem="2IH-xk-z8o" secondAttribute="trailing" constant="11.5" id="zrq-ZZ-phV"/>
             </constraints>

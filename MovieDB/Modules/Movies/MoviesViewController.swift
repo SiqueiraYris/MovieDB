@@ -16,6 +16,7 @@ final class MoviesViewController: UIViewController {
     
     // MARK: - Outlets
 
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var moviesTableView: UITableView! {
         didSet {
             moviesTableView.dataSource = self
@@ -75,6 +76,7 @@ extension MoviesViewController: MoviesViewModelDelegate {
             } else {
                 self.moviesTableView.reloadData()
             }
+            self.loader.stopAnimating()
         }
     }
     
