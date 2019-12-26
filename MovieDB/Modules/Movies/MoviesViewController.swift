@@ -50,6 +50,12 @@ final class MoviesViewController: UIViewController {
         setupNavigation()
     }
     
+    // MARK: - Setup Status Bar
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - Custom Methods
     
     func setupNavigation() {
