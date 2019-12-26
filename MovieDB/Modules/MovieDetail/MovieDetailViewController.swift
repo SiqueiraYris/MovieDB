@@ -23,8 +23,9 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieOverview: UITextView!
     @IBOutlet weak var movieRatingView: UIView!
     @IBOutlet weak var movieRating: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
-    // MARK: - Life cycle
+    // MARK: - Life Cycle
     
     init(viewModel: MovieDetailViewModelProtocol) {
         super.init(nibName: "MovieDetailViewController", bundle: Bundle.main)
@@ -46,8 +47,16 @@ final class MovieDetailViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    // MARK: - Setup Status Bar
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
+    }
+    
+    // MARK: - IB Actions
+    
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        viewModel?.goBack()
     }
     
 }
@@ -76,7 +85,10 @@ extension MovieDetailViewController {
         movieTitle.text = viewModel?.movie.title
         movieOverview.text = viewModel?.movie.overview
         movieRating.text = viewModel?.movie.voteAverage.description
-//        movieDuration.text = "\(viewModel?.movie.runtime)"
+        
+        if let time = viewModel?.movie.runtime {
+            movieDuration.text = Date().convertDate(date: time)
+        }
         
         if let image = viewModel?.movie.posterPath {
             movieMainImage.download(image: image)

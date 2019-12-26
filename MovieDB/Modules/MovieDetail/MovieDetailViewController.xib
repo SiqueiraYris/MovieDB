@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieDB" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="rqb-Gm-otu" id="S01-Od-7Qg"/>
                 <outlet property="movieBanner" destination="Dz2-FR-AA6" id="rDd-5J-imM"/>
                 <outlet property="movieDuration" destination="tRE-OJ-SiA" id="oFK-z3-Vuq"/>
                 <outlet property="movieMainImage" destination="2IH-xk-z8o" id="68e-Fh-ocn"/>
@@ -85,15 +86,30 @@
                         <constraint firstItem="HWm-Xb-Dli" firstAttribute="centerX" secondItem="nMP-nP-3o3" secondAttribute="centerX" id="rch-Wf-7Au"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-Gm-otu">
+                    <rect key="frame" x="9" y="49" width="12" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="B1k-BE-prX"/>
+                        <constraint firstAttribute="width" constant="12" id="wIk-OU-RBF"/>
+                    </constraints>
+                    <state key="normal" title="&lt;">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="2EF-T6-Iwa"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.015686274509803921" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="rqb-Gm-otu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="2dd-3c-1ww"/>
                 <constraint firstItem="xLz-3D-ItI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="172" id="3wx-xm-Dd9"/>
                 <constraint firstItem="Dz2-FR-AA6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4CL-qO-Uz3"/>
                 <constraint firstItem="tRE-OJ-SiA" firstAttribute="top" secondItem="xLz-3D-ItI" secondAttribute="bottom" constant="2" id="7NX-Cs-PZ0"/>
                 <constraint firstItem="Dz2-FR-AA6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8NP-f3-heJ"/>
                 <constraint firstItem="cbz-FT-60Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="B9G-kD-wgR"/>
                 <constraint firstItem="nMP-nP-3o3" firstAttribute="top" secondItem="xLz-3D-ItI" secondAttribute="bottom" constant="13" id="EQa-WX-ElV"/>
+                <constraint firstItem="rqb-Gm-otu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="IWZ-Ey-8KE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dz2-FR-AA6" secondAttribute="trailing" id="Ibr-fl-crw"/>
                 <constraint firstItem="2IH-xk-z8o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="KPA-kT-Rdp"/>
                 <constraint firstItem="2IH-xk-z8o" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="61" id="OCY-fI-31x"/>

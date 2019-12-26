@@ -32,7 +32,7 @@ final class MovieDetailCoordinator: Coordinator {
     // MARK: - Navigation
     
     func goBack() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
 }
