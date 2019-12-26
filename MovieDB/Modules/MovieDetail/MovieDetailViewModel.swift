@@ -24,15 +24,17 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     // MARK: - Attributes
     
     private var coordinator: MovieDetailCoordinator?
+    private let interactor: MovieDetailInteractorProtocol
     private var movieId: Int
     
-    var movie: Movie!
+    var movie: MovieDetail!
     var delegate: MovieDetailViewModelDelegate?
     
     // MARK: - Life Cycle
     
-    init(coordinator: MovieDetailCoordinator, movieId: Int) {
+    init(coordinator: MovieDetailCoordinator, interactor: MovieDetailInteractorProtocol = MovieDetailInteractor(), movieId: Int) {
         self.coordinator = coordinator
+        self.interactor = interactor
         self.movieId = movieId
     }
     
@@ -45,7 +47,15 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     // MARK: - Custom Methods
     
     func fetchMovieDetail() {
-
+        interactor.fetchMovieDetailById(id: self.movieId) { result in
+            switch result {
+            case .success(let movie):
+                self.movie = movie
+                self.delegate?.fetchMovieDetail(error: nil)
+            case .failure(let error):
+                self.delegate?.fetchMovieDetail(error: error)
+            }
+        }
     }
     
 }
