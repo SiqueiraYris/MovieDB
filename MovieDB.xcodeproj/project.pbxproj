@@ -159,13 +159,12 @@
 		4E14AFCE23AC47DB006F973F /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				4E14B00123AC4D1D006F973F /* Application */,
 				4E14B03423AD2C1F006F973F /* Extensions */,
 				4E14B02C23AD14D7006F973F /* Models */,
-				4E14B02F23AD1587006F973F /* Network */,
 				4E14B00423AC4D50006F973F /* Modules */,
-				4E14B00123AC4D1D006F973F /* Application */,
+				4E14B02F23AD1587006F973F /* Network */,
 				4E14B00223AC4D34006F973F /* Resources */,
-				4E14AFDA23AC47DC006F973F /* LaunchScreen.storyboard */,
 			);
 			path = MovieDB;
 			sourceTree = "<group>";
@@ -183,8 +182,8 @@
 		4E14B00123AC4D1D006F973F /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				4E14AFCF23AC47DB006F973F /* AppDelegate.swift */,
 				4E14B00F23AC4DFB006F973F /* AppCoordinator.swift */,
+				4E14AFCF23AC47DB006F973F /* AppDelegate.swift */,
 				4E14B01123AC4F1A006F973F /* Coordinator.swift */,
 				4E14AFDD23AC47DC006F973F /* Info.plist */,
 			);
@@ -195,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4E14AFD823AC47DC006F973F /* Assets.xcassets */,
+				4E14AFDA23AC47DC006F973F /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,10 +213,10 @@
 			children = (
 				C788BC8123B329AB00107139 /* Cell */,
 				4E14B00623AC4DBE006F973F /* MoviesCoordinator.swift */,
-				4E14B00823AC4DC9006F973F /* MoviesViewModel.swift */,
+				4E14B01F23AD013E006F973F /* MoviesInteractor.swift */,
 				4E14B00A23AC4DDD006F973F /* MoviesViewController.swift */,
 				4E14B00B23AC4DDD006F973F /* MoviesViewController.xib */,
-				4E14B01F23AD013E006F973F /* MoviesInteractor.swift */,
+				4E14B00823AC4DC9006F973F /* MoviesViewModel.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -225,10 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				4E14B01623ACF8A8006F973F /* MovieDetailCoordinator.swift */,
-				4E14B01823ACFBED006F973F /* MovieDetailViewModel.swift */,
+				C7BEF9C723B463FA0058A377 /* MovieDetailInteractor.swift */,
 				4E14B01A23ACFBFA006F973F /* MovieDetailViewController.swift */,
 				4E14B01B23ACFBFA006F973F /* MovieDetailViewController.xib */,
-				C7BEF9C723B463FA0058A377 /* MovieDetailInteractor.swift */,
+				4E14B01823ACFBED006F973F /* MovieDetailViewModel.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -236,11 +236,11 @@
 		4E14B02C23AD14D7006F973F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C7BEF9D323B531ED0058A377 /* Backdrop.swift */,
 				4E14B02D23AD14E2006F973F /* Movie.swift */,
 				C7BEF9C923B464A60058A377 /* MovieDetail.swift */,
 				C7BEF9D123B531570058A377 /* MovieImages.swift */,
 				C788BC7B23B2FFBE00107139 /* MoviesResponse.swift */,
-				C7BEF9D323B531ED0058A377 /* Backdrop.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,12 +257,12 @@
 		4E14B03423AD2C1F006F973F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4E14B03523AD2C37006F973F /* URLRequest+Extensions.swift */,
-				C7BEF9C323B437D50058A377 /* UIView+Extensions.swift */,
-				C7BEF9C523B462A60058A377 /* UIImageView+Extensions.swift */,
-				C7BEF9CD23B476010058A377 /* UIColor+Extensions.swift */,
 				C7BEF9CF23B48F840058A377 /* Date+Extensions.swift */,
+				C7BEF9CD23B476010058A377 /* UIColor+Extensions.swift */,
+				C7BEF9C523B462A60058A377 /* UIImageView+Extensions.swift */,
+				C7BEF9C323B437D50058A377 /* UIView+Extensions.swift */,
 				C7BEF9D723B53C940058A377 /* UIViewController+Extensions.swift */,
+				4E14B03523AD2C37006F973F /* URLRequest+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,9 +270,9 @@
 		C788BC8123B329AB00107139 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C788BC8223B3FA7B00107139 /* MoviesCellViewModel.swift */,
 				C788BC7D23B329A600107139 /* MoviesTableViewCell.swift */,
 				C788BC7E23B329A600107139 /* MoviesTableViewCell.xib */,
-				C788BC8223B3FA7B00107139 /* MoviesCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
