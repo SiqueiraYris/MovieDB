@@ -30,6 +30,7 @@
 		C788BC7F23B329A600107139 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788BC7D23B329A600107139 /* MoviesTableViewCell.swift */; };
 		C788BC8023B329A600107139 /* MoviesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C788BC7E23B329A600107139 /* MoviesTableViewCell.xib */; };
 		C788BC8323B3FA7B00107139 /* MoviesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C788BC8223B3FA7B00107139 /* MoviesCellViewModel.swift */; };
+		C7BEF9C423B437D50058A377 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9C323B437D50058A377 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C788BC7D23B329A600107139 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		C788BC7E23B329A600107139 /* MoviesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesTableViewCell.xib; sourceTree = "<group>"; };
 		C788BC8223B3FA7B00107139 /* MoviesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCellViewModel.swift; sourceTree = "<group>"; };
+		C7BEF9C323B437D50058A377 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DA53B9C06F5E06077785158F /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				4E14B03523AD2C37006F973F /* URLRequest+Extensions.swift */,
+				C7BEF9C323B437D50058A377 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				C788BC8323B3FA7B00107139 /* MoviesCellViewModel.swift in Sources */,
 				C788BC7C23B2FFBE00107139 /* MoviesResponse.swift in Sources */,
 				4E14B02023AD013F006F973F /* MoviesInteractor.swift in Sources */,
+				C7BEF9C423B437D50058A377 /* UIView+Extensions.swift in Sources */,
 				4E14B00923AC4DC9006F973F /* MoviesViewModel.swift in Sources */,
 				4E14B02E23AD14E2006F973F /* Movie.swift in Sources */,
 				4E14B03823AD2D0A006F973F /* API.swift in Sources */,

@@ -9,6 +9,7 @@
 import Foundation
 
 extension URLRequest {
+    
     public enum HTTPMethod: String {
         case get = "GET"
     }
@@ -24,9 +25,11 @@ extension URLRequest {
             self.httpMethod = newValue?.rawValue
         }
     }
+    
 }
 
 extension URLRequest {
+    
     public init(url: URL, method: HTTPMethod, contentType: String?, body: Data?) {
         self.init(url: url)
 
@@ -34,4 +37,5 @@ extension URLRequest {
         self.setValue(contentType, forHTTPHeaderField: "Content-Type")
         self.httpBody = body
     }
+    
 }
