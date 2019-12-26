@@ -28,6 +28,7 @@ class MoviesTableViewCell: UITableViewCell {
         movieTitle.text = viewModel.movieTitle
         movieOverview.text = viewModel.movieOverview
         movieReleaseDate.text = viewModel.movieRelease
+        movieImage.download(image: viewModel.movieImage)
         
         movieContentView.roundCorners(radious: 5.0)
 //        scoreLabel.text = viewModel.movieRating
