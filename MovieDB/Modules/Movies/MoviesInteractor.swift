@@ -21,7 +21,7 @@ final class MoviesInteractor: API, MoviesInteractorProtocol {
     private var serviceKey: String = "16fd5a2a34d2c3651edf338a920f6176"
     private var path: String = "https://api.themoviedb.org/3"
     
-    // MARK: - Custom Methods
+    // MARK: - Fetch Data
     
     func fetchMoviesFromPage(completion: @escaping (Result<[Movie], Error>) -> Void) {
         let params = [

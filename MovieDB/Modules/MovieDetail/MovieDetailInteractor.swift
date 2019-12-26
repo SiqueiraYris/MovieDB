@@ -21,6 +21,7 @@ final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
     private var serviceKey: String = "16fd5a2a34d2c3651edf338a920f6176"
     private var path: String = "https://api.themoviedb.org/3"
     
+    // MARK: - Fetch Data
     
     func fetchMovieDetailById(id: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
         let params = [
@@ -41,4 +42,5 @@ final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
             }
         }
     }
+    
 }

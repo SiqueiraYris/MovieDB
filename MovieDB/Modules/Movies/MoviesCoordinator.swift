@@ -27,7 +27,7 @@ final class MoviesCoordinator: Coordinator {
     }
     
     
-    // MARK: - Navigations
+    // MARK: - Navigation
     
     func presentMovieDetail(movieId: Int) {
         let moviesCoordinator = MovieDetailCoordinator(presenter: navigationController, movieId: movieId)

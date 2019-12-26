@@ -14,12 +14,22 @@ final class MovieDetailViewController: UIViewController {
     
     private var viewModel: MovieDetailViewModelProtocol?
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var movieBanner: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieDuration: UILabel!
+    @IBOutlet weak var movieMainImage: UIImageView!
+    @IBOutlet weak var movieOverview: UITextView!
+    @IBOutlet weak var movieRatingView: UIView!
+    @IBOutlet weak var movieRating: UILabel!
     
     // MARK: - Life cycle
     
     init(viewModel: MovieDetailViewModelProtocol) {
-        self.viewModel = viewModel
         super.init(nibName: "MovieDetailViewController", bundle: Bundle.main)
+        self.viewModel = viewModel
+        self.viewModel?.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -33,6 +43,11 @@ final class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
 }
@@ -45,8 +60,34 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
         if let err = error {
             
         } else {
-            
+            DispatchQueue.main.async {
+                self.setupUI()
+            }
         }
+    }
+    
+}
+
+extension MovieDetailViewController {
+    
+    // MARK: - Binds
+    
+    func setupUI() {
+        movieTitle.text = viewModel?.movie.title
+        movieOverview.text = viewModel?.movie.overview
+        movieRating.text = viewModel?.movie.voteAverage.description
+//        movieDuration.text = "\(viewModel?.movie.runtime)"
+        
+        if let image = viewModel?.movie.posterPath {
+            movieMainImage.download(image: image)
+            movieMainImage.addRoundedBorder(radious: 5.0, color: UIColor.caribbeanGreen.cgColor)
+        }
+        
+        if let banner = viewModel?.movie.backdropPath {
+            movieBanner.download(image: banner)
+        }
+        
+        movieRatingView.roundCorners(radious: 10.0)
     }
     
 }

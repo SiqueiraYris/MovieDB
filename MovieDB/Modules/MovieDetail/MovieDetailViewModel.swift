@@ -8,7 +8,12 @@
 
 import Foundation
 
+// MARK: - View Model Protocol
+
 protocol MovieDetailViewModelProtocol {
+    var movie: MovieDetail! { get }
+    var delegate: MovieDetailViewModelDelegate? { get set }
+    
     func goBack()
     func fetchMovieDetail()
 }
