@@ -10,6 +10,8 @@ import Foundation
 
 extension URLRequest {
     
+    // MARK: - Attributes
+    
     public enum HTTPMethod: String {
         case get = "GET"
     }
@@ -29,6 +31,8 @@ extension URLRequest {
 }
 
 extension URLRequest {
+    
+    // MARK: - Initializers
     
     public init(url: URL, method: HTTPMethod, contentType: String?, body: Data?) {
         self.init(url: url)

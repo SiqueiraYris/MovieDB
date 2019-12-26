@@ -14,6 +14,7 @@ extension UIColor {
     
     static var nordic = UIColor(hexString: "#042D2D")
     static var william = UIColor(hexString: "#577272")
+    static var caribbeanGreen = UIColor(hexString: "#03D475")
     
 }
 
