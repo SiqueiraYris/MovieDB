@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MoviesCellViewModel {
+final class MoviesCellViewModel {
     
     // MARK: - Attributes
     

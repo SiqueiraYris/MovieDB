@@ -21,7 +21,7 @@ class MoviesResponse: Codable {
         case totalPages = "total_pages"
     }
     
-    // MARK: - Life Cycle
+    // MARK: - Initializers
 
     init(results: [Movie], page: Int, totalResults: Int, totalPages: Int) {
         self.results = results

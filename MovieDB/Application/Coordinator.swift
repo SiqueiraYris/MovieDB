@@ -10,13 +10,17 @@ import Foundation
 import UIKit
 
 protocol Coordinator: AnyObject {
+    
     func initModule() -> UIViewController?
     func start()
+    
 }
 
 extension Coordinator {
+    
     func start(){ } 
     func initModule() -> UIViewController? {
         return nil
     }
+    
 }

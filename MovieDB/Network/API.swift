@@ -10,6 +10,8 @@ import Foundation
 
 class API {
     
+    // MARK: - Make Request
+    
     func request(queryParams: Dictionary<String, String>?, urlPath: String, method: URLRequest.HTTPMethod = .get, contentType: String = "Content-Type", body: Data? = nil, completion: @escaping (Result<Data, Error>) -> Void) {
         var requestUrl: URL!
         if let query = queryParams {
@@ -33,6 +35,8 @@ class API {
         })
         task.resume()
     }
+    
+    // MARK: - Handle With Parameters
 
     func queryParamsHandler(params: Dictionary<String, String>, path: String) -> URL? {
         var iterator = params.makeIterator()
@@ -49,5 +53,6 @@ class API {
         
         return finalUrl
     }
+    
 }
 
