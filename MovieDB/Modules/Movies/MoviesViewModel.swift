@@ -36,7 +36,7 @@ final class MoviesViewModel: MoviesViewModelProtocol {
     
     // MARK: - Life Cycle
     
-    init(coordinator: MoviesCoordinator, interactor: MoviesInteractorProtocol = MoviesInteractor()) {
+    init(coordinator: MoviesCoordinator? = nil, interactor: MoviesInteractorProtocol = MoviesInteractor()) {
         self.coordinator = coordinator
         self.interactor = interactor
     }
