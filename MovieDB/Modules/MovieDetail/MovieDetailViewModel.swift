@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import ImageSlideshow
 
 // MARK: - View Model Protocol
 
 protocol MovieDetailViewModelProtocol {
     var movie: MovieDetail! { get }
+    var images: [Backdrop] { get }
     var delegate: MovieDetailViewModelDelegate? { get set }
     
     func goBack()
     func fetchMovieDetail()
+    func createImageSources() -> [KingfisherSource]
 }
 
 // MARK: - View Model Delegate
@@ -33,6 +36,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     private var movieId: Int
     
     var movie: MovieDetail!
+    var images: [Backdrop] = []
     var delegate: MovieDetailViewModelDelegate?
     
     // MARK: - Life Cycle
@@ -56,11 +60,34 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
             switch result {
             case .success(let movie):
                 self.movie = movie
+                self.fetchMovieImages()
+            case .failure(let error):
+                self.delegate?.fetchMovieDetail(error: error)
+            }
+        }
+    }
+    
+    func fetchMovieImages() {
+        interactor.fetchMovieImages(id: self.movieId) { result in
+            switch result {
+            case .success(let images):
+                self.images = images
                 self.delegate?.fetchMovieDetail(error: nil)
             case .failure(let error):
                 self.delegate?.fetchMovieDetail(error: error)
             }
         }
+    }
+    
+    func createImageSources() -> [KingfisherSource] {
+        var sources: [KingfisherSource] = []
+        _ = images.prefix(5).map {
+            guard let filePath = $0.filePath else { return }
+            if let kfSource = KingfisherSource(urlString: "https://image.tmdb.org/t/p/w500/\(filePath)") {
+                sources.append(kfSource)
+            }
+        }
+        return  sources
     }
     
 }

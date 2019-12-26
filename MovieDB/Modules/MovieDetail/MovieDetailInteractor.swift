@@ -12,6 +12,7 @@ import Foundation
 
 protocol MovieDetailInteractorProtocol: class {
     func fetchMovieDetailById(id: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void)
+    func fetchMovieImages(id: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void)
 }
 
 final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
@@ -36,6 +37,26 @@ final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
                 do {
                     let response = try JSONDecoder().decode(MovieDetail.self, from: data)
                     completion(.success(response))
+                } catch let error {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    func fetchMovieImages(id: Int, completion: @escaping (Result<[Backdrop], Error>) -> Void) {
+        let params = [
+           "api_key": serviceKey
+        ]
+
+        request(queryParams: params, urlPath: "\(path)/movie/\(id)/images") { response in
+            switch response {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let data):
+                do {
+                    let response = try JSONDecoder().decode(MovieImage.self, from: data)
+                    completion(.success(response.backdrops ?? []))
                 } catch let error {
                     completion(.failure(error))
                 }

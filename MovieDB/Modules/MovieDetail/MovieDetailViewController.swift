@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 final class MovieDetailViewController: UIViewController {
 
@@ -24,6 +25,7 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieRatingView: UIView!
     @IBOutlet weak var movieRating: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var movieImages: ImageSlideshow!
     
     // MARK: - Life Cycle
     
@@ -99,7 +101,27 @@ extension MovieDetailViewController {
             movieBanner.download(image: banner)
         }
         
+        DispatchQueue.main.async {
+            self.configureImageSlider()
+        }
+        
         movieRatingView.roundCorners(radious: 10.0)
+    }
+    
+    // MARK: - Custom Methods
+    
+    func configureImageSlider() {
+        let pageIndicator = UIPageControl()
+        pageIndicator.currentPageIndicatorTintColor = .caribbeanGreen
+        pageIndicator.pageIndicatorTintColor = .white
+        
+        movieImages.pageIndicator = pageIndicator
+        movieImages.pageIndicatorPosition = PageIndicatorPosition(horizontal: .center, vertical: .under)
+        movieImages.contentScaleMode = .scaleToFill
+        movieImages.backgroundColor = .clear
+        
+        guard let sources = viewModel?.createImageSources() else { return }
+        movieImages.setImageInputs(sources)
     }
     
 }
