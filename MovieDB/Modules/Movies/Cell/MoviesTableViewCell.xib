@@ -65,6 +65,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Uz9-bB-lnb" secondAttribute="bottom" constant="11" id="4kk-7q-RzV"/>
                     <constraint firstAttribute="trailing" secondItem="Uz9-bB-lnb" secondAttribute="trailing" constant="14" id="PGj-IK-sQG"/>
@@ -72,6 +73,7 @@
                     <constraint firstItem="Uz9-bB-lnb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sQM-J3-Lhg"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="movieContentView" destination="Uz9-bB-lnb" id="f4Q-3a-8FG"/>

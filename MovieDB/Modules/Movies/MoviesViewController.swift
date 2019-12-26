@@ -43,8 +43,21 @@ final class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "Top Movies"
+        
+        setupNavigation()
+    }
+    
+    func setupNavigation() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .nordic
+        self.navigationController?.view.backgroundColor = .nordic
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        view.createGradientBackground(firstColor: UIColor.william.cgColor,
+                                      secondColor: UIColor.nordic.cgColor)
     }
     
 }
