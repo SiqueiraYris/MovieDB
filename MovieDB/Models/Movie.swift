@@ -9,6 +9,9 @@
 // MARK: - Movie
 
 class Movie: Codable {
+    
+    // MARK: - Attributes
+    
     let id: Int
     let genreIds: [Int]
     let popularity: Double
@@ -35,6 +38,8 @@ class Movie: Codable {
         case backdropPath = "backdrop_path"
         case posterPath = "poster_path"
     }
+    
+    // MARK: - Initializers
 
     init(id: Int, popularity: Double, genreIds: [Int], title: String, video: Bool, voteCount: Int, voteAverage: Double, releaseDate: String, originalLanguage: String, originalTitle: String, backdropPath: String, adult: Bool, overview: String, posterPath: String) {
         self.popularity = popularity
@@ -52,4 +57,5 @@ class Movie: Codable {
         self.overview = overview
         self.posterPath = posterPath
     }
+    
 }
