@@ -43,6 +43,12 @@
 		C7BEF9E023B556260058A377 /* MoviesViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BEF9DF23B556260058A377 /* MoviesViewModelTest.swift */; };
 		C7E3591723B55EE400C0BEFA /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3591623B55EE300C0BEFA /* movies.json */; };
 		C7E3591823B55EE500C0BEFA /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3591623B55EE300C0BEFA /* movies.json */; };
+		C7E3591C23B5612F00C0BEFA /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3591B23B5612F00C0BEFA /* movie.json */; };
+		C7E3591E23B5614400C0BEFA /* MovieDetailInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3591D23B5614400C0BEFA /* MovieDetailInteractorMock.swift */; };
+		C7E3591F23B5614600C0BEFA /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3591B23B5612F00C0BEFA /* movie.json */; };
+		C7E3592123B5617C00C0BEFA /* MovieDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E3592023B5617C00C0BEFA /* MovieDetailViewModelTest.swift */; };
+		C7E3592323B5649B00C0BEFA /* backdrops.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3592223B5649B00C0BEFA /* backdrops.json */; };
+		C7E3592423B564A900C0BEFA /* backdrops.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E3592223B5649B00C0BEFA /* backdrops.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,10 @@
 		C7BEF9DD23B556060058A377 /* MoviesInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractorMock.swift; sourceTree = "<group>"; };
 		C7BEF9DF23B556260058A377 /* MoviesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModelTest.swift; sourceTree = "<group>"; };
 		C7E3591623B55EE300C0BEFA /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		C7E3591B23B5612F00C0BEFA /* movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
+		C7E3591D23B5614400C0BEFA /* MovieDetailInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractorMock.swift; sourceTree = "<group>"; };
+		C7E3592023B5617C00C0BEFA /* MovieDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModelTest.swift; sourceTree = "<group>"; };
+		C7E3592223B5649B00C0BEFA /* backdrops.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = backdrops.json; sourceTree = "<group>"; };
 		DA53B9C06F5E06077785158F /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				C7E3591623B55EE300C0BEFA /* movies.json */,
+				C7E3591B23B5612F00C0BEFA /* movie.json */,
+				C7E3592223B5649B00C0BEFA /* backdrops.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -296,6 +308,8 @@
 		C7BEF9DC23B555BC0058A377 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C7E3591D23B5614400C0BEFA /* MovieDetailInteractorMock.swift */,
+				C7E3592023B5617C00C0BEFA /* MovieDetailViewModelTest.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -398,7 +412,9 @@
 				C788BC8023B329A600107139 /* MoviesTableViewCell.xib in Resources */,
 				4E14AFDC23AC47DC006F973F /* LaunchScreen.storyboard in Resources */,
 				4E14AFD923AC47DC006F973F /* Assets.xcassets in Resources */,
+				C7E3591F23B5614600C0BEFA /* movie.json in Resources */,
 				4E14B00D23AC4DDD006F973F /* MoviesViewController.xib in Resources */,
+				C7E3592423B564A900C0BEFA /* backdrops.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +422,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E3592323B5649B00C0BEFA /* backdrops.json in Resources */,
+				C7E3591C23B5612F00C0BEFA /* movie.json in Resources */,
 				C7E3591723B55EE400C0BEFA /* movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +510,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E3592123B5617C00C0BEFA /* MovieDetailViewModelTest.swift in Sources */,
+				C7E3591E23B5614400C0BEFA /* MovieDetailInteractorMock.swift in Sources */,
 				C7BEF9DE23B556060058A377 /* MoviesInteractorMock.swift in Sources */,
 				C7BEF9E023B556260058A377 /* MoviesViewModelTest.swift in Sources */,
 			);

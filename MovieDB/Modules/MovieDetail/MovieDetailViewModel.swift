@@ -41,7 +41,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     
     // MARK: - Life Cycle
     
-    init(coordinator: MovieDetailCoordinator, interactor: MovieDetailInteractorProtocol = MovieDetailInteractor(), movieId: Int) {
+    init(coordinator: MovieDetailCoordinator? = nil, interactor: MovieDetailInteractorProtocol = MovieDetailInteractor(), movieId: Int) {
         self.coordinator = coordinator
         self.interactor = interactor
         self.movieId = movieId
