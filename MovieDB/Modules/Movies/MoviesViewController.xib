@@ -20,14 +20,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iU9-Hd-Wzr">
-                    <rect key="frame" x="14.5" y="60" width="385" height="802"/>
+                    <rect key="frame" x="0.0" y="60" width="414" height="802"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iU9-Hd-Wzr" secondAttribute="trailing" constant="14.69" id="FMu-Ru-TKM"/>
-                <constraint firstItem="iU9-Hd-Wzr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14.380000000000001" id="Sly-PA-T5g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iU9-Hd-Wzr" secondAttribute="trailing" id="FMu-Ru-TKM"/>
+                <constraint firstItem="iU9-Hd-Wzr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sly-PA-T5g"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iU9-Hd-Wzr" secondAttribute="bottom" id="g2y-rv-Jz9"/>
                 <constraint firstItem="iU9-Hd-Wzr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="pXn-vq-ZG1"/>
             </constraints>

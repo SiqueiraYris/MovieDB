@@ -14,15 +14,17 @@ final class MovieDetailCoordinator: Coordinator {
     // MARK: - Attributes
     
     private weak var navigationController: UINavigationController?
+    private var movieId: Int
     
-    // MARK: - Life cycle
+    // MARK: - Life Cycle
     
-    init(presenter: UINavigationController?) {
-        navigationController = presenter
+    init(presenter: UINavigationController?, movieId: Int) {
+        self.navigationController = presenter
+        self.movieId = movieId
     }
     
     func start() {
-        let viewModel = MovieDetailViewModel(coordinator: self)
+        let viewModel = MovieDetailViewModel(coordinator: self, movieId: self.movieId)
         let viewController = MovieDetailViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }

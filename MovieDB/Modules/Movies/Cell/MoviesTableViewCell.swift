@@ -20,6 +20,7 @@ class MoviesTableViewCell: UITableViewCell {
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
+    @IBOutlet weak var movieContentView: UIView!
     
     // MARK: - Initializers
     
@@ -27,6 +28,9 @@ class MoviesTableViewCell: UITableViewCell {
         movieTitle.text = viewModel.movieTitle
         movieOverview.text = viewModel.movieOverview
         movieReleaseDate.text = viewModel.movieRelease
+        
+        movieContentView.roundCorners(radious: 5.0)
+//        scoreLabel.text = viewModel.movieRating
     }
     
 }

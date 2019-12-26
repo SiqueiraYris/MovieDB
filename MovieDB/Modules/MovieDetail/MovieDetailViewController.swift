@@ -26,7 +26,27 @@ final class MovieDetailViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewModel?.fetchMovieDetail()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+}
+
+// MARK: - View Model Delegate
+
+extension MovieDetailViewController: MovieDetailViewModelDelegate {
+    
+    func fetchMovieDetail(error: Error?) {
+        if let err = error {
+            
+        } else {
+            
+        }
+    }
+    
 }

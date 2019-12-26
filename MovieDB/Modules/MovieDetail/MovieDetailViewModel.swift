@@ -10,6 +10,13 @@ import Foundation
 
 protocol MovieDetailViewModelProtocol {
     func goBack()
+    func fetchMovieDetail()
+}
+
+// MARK: - View Model Delegate
+
+protocol MovieDetailViewModelDelegate {
+    func fetchMovieDetail(error: Error?)
 }
 
 final class MovieDetailViewModel: MovieDetailViewModelProtocol {
@@ -17,17 +24,28 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     // MARK: - Attributes
     
     private var coordinator: MovieDetailCoordinator?
+    private var movieId: Int
     
-    // MARK: - Life cycle
+    var movie: Movie!
+    var delegate: MovieDetailViewModelDelegate?
     
-    init(coordinator: MovieDetailCoordinator) {
+    // MARK: - Life Cycle
+    
+    init(coordinator: MovieDetailCoordinator, movieId: Int) {
         self.coordinator = coordinator
+        self.movieId = movieId
     }
     
     // MARK: - Navigation
 
     func goBack() {
         coordinator?.goBack()
+    }
+    
+    // MARK: - Custom Methods
+    
+    func fetchMovieDetail() {
+
     }
     
 }

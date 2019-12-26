@@ -14,7 +14,7 @@ protocol MoviesViewModelProtocol {
     var movies: [Movie] { get }
     var delegate: MoviesViewModelDelegate? { get set }
 
-    func presentMovieDetail()
+    func presentMovieDetail(at row: Int)
     func fetchMovies()
 }
 
@@ -43,8 +43,8 @@ final class MoviesViewModel: MoviesViewModelProtocol {
     
     // MARK: - Navigation
 
-    func presentMovieDetail() {
-        coordinator?.presentMovieDetail()
+    func presentMovieDetail(at row: Int) {
+        coordinator?.presentMovieDetail(movieId: movies[row].id)
     }
     
     
