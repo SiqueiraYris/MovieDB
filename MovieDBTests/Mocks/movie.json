@@ -6,7 +6,7 @@
     "genres": [
         {
             "id": 35,
-            "name": "Comedy"
+            "name": "Comédia"
         },
         {
             "id": 18,
@@ -17,13 +17,13 @@
             "name": "Romance"
         }
     ],
-    "homepage": null,
+    "homepage": "",
     "id": 19404,
     "imdb_id": "tt0112870",
     "original_language": "hi",
     "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
-    "overview": "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.",
-    "popularity": 15.818,
+    "overview": "Raj e Simran são dois jovens indianos vivendo em Londres que, acidentalmente, se conhecem durante uma viagem pela Europa. Eles se apaixonam, mas Simran está prometida a um indiano. Raj não desanima e segue seu amor até a Índia, onde os dois tentam convencer a todos que precisam ficar juntos.",
+    "popularity": 18.874,
     "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
     "production_companies": [
         {
@@ -49,9 +49,563 @@
         }
     ],
     "status": "Released",
-    "tagline": "Come Fall In love, All Over Again..",
+    "tagline": "",
     "title": "Dilwale Dulhania Le Jayenge",
     "video": false,
     "vote_average": 8.9,
-    "vote_count": 2176
+    "vote_count": 2176,
+    "credits": {
+        "cast": [
+            {
+                "cast_id": 1,
+                "character": "Raj Malhotra",
+                "credit_id": "52fe47d69251416c750a71a1",
+                "gender": 2,
+                "id": 35742,
+                "name": "Shah Rukh Khan",
+                "order": 0,
+                "profile_path": "/1w76N732BRbwQegkHnhwE4zgls0.jpg"
+            },
+            {
+                "cast_id": 2,
+                "character": "Simran Singh",
+                "credit_id": "52fe47d69251416c750a71a5",
+                "gender": 1,
+                "id": 55061,
+                "name": "Kajol",
+                "order": 1,
+                "profile_path": "/h4m0TkDuEMCUNaPrQxMRyFb2AQ7.jpg"
+            },
+            {
+                "cast_id": 3,
+                "character": "Chaudhry Baldev Singh",
+                "credit_id": "52fe47d69251416c750a71a9",
+                "gender": 2,
+                "id": 691,
+                "name": "Amrish Puri",
+                "order": 2,
+                "profile_path": "/nrRQUwZcPYUWfpgpL2g7Grkb3Mz.jpg"
+            },
+            {
+                "cast_id": 8,
+                "character": "Dharamvir Malhotra",
+                "credit_id": "52fe47d69251416c750a71c3",
+                "gender": 2,
+                "id": 6217,
+                "name": "Anupam Kher",
+                "order": 3,
+                "profile_path": "/b6xEzU5IjUJXhaFojUpllxIBqUy.jpg"
+            },
+            {
+                "cast_id": 9,
+                "character": "Ajit Singh",
+                "credit_id": "52fe47d69251416c750a71c7",
+                "gender": 2,
+                "id": 35759,
+                "name": "Satish Shah",
+                "order": 4,
+                "profile_path": "/rJpld5ViYmACQUGvYAYEggnHi2O.jpg"
+            },
+            {
+                "cast_id": 54,
+                "character": "Lajwanti 'Lajjo' Singh",
+                "credit_id": "57a30dbe925141276900048b",
+                "gender": 1,
+                "id": 146971,
+                "name": "Farida Jalal",
+                "order": 5,
+                "profile_path": "/qLlAHvTwQw6A91G2CLptlcUMYQZ.jpg"
+            },
+            {
+                "cast_id": 10,
+                "character": "Simran's Grandmother",
+                "credit_id": "52fe47d69251416c750a71cb",
+                "gender": 1,
+                "id": 146972,
+                "name": "Achala Sachdev",
+                "order": 6,
+                "profile_path": "/mBDe6cvHB3cAe2YQ4CS8BmnGPWC.jpg"
+            },
+            {
+                "cast_id": 11,
+                "character": "Simran's Aunt",
+                "credit_id": "52fe47d69251416c750a71cf",
+                "gender": 1,
+                "id": 78248,
+                "name": "Himani Shivpuri",
+                "order": 7,
+                "profile_path": "/p9Ef7C51bdp6z6ABGiCgJFz9q0j.jpg"
+            },
+            {
+                "cast_id": 12,
+                "character": "Rajeshwari / Chutki",
+                "credit_id": "52fe47d69251416c750a71d3",
+                "gender": 1,
+                "id": 146973,
+                "name": "Pooja Ruparel",
+                "order": 8,
+                "profile_path": "/evHnj6s0Z2sbV1Mq0dfXxQQU8Mf.jpg"
+            },
+            {
+                "cast_id": 13,
+                "character": "Preeti Singh",
+                "credit_id": "52fe47d69251416c750a71d7",
+                "gender": 1,
+                "id": 146974,
+                "name": "Mandira Bedi",
+                "order": 9,
+                "profile_path": "/l50tq0OwzIxE4Z5JXDUSQvqCltN.jpg"
+            },
+            {
+                "cast_id": 36,
+                "character": "Man on bike infront of Kajo",
+                "credit_id": "57a305869251410c7d000979",
+                "gender": 2,
+                "id": 69709,
+                "name": "Uday Chopra",
+                "order": 10,
+                "profile_path": "/dE8SJ1In3L5zHeVOB91LBJXmtN3.jpg"
+            },
+            {
+                "cast_id": 37,
+                "character": "Kuljeet",
+                "credit_id": "57a305909251416b97003d21",
+                "gender": 2,
+                "id": 85696,
+                "name": "Parmeet Sethi",
+                "order": 11,
+                "profile_path": "/wTiUYX9E8mh6zUrqZldOKLomnyB.jpg"
+            },
+            {
+                "cast_id": 41,
+                "character": "Rocky",
+                "credit_id": "57a305b29251417c57000d9b",
+                "gender": 2,
+                "id": 35736,
+                "name": "Karan Johar",
+                "order": 12,
+                "profile_path": "/zip1x7OXOBxXxcdYvKOgw6MnAWm.jpg"
+            },
+            {
+                "cast_id": 42,
+                "character": "Roby",
+                "credit_id": "57a305bec3a368295b000e08",
+                "gender": 0,
+                "id": 631226,
+                "name": "Arjun Sablok",
+                "order": 13,
+                "profile_path": null
+            },
+            {
+                "cast_id": 43,
+                "character": "Sheena",
+                "credit_id": "57a305c99251416b97003d39",
+                "gender": 1,
+                "id": 102252,
+                "name": "Anaita Shroff Adajania",
+                "order": 14,
+                "profile_path": "/yLDxdFAcESXvsfgZKv8ob8TSWvw.jpg"
+            },
+            {
+                "cast_id": 51,
+                "character": "Simran's friend",
+                "credit_id": "57a30d8dc3a3682fa7004c09",
+                "gender": 0,
+                "id": 1661299,
+                "name": "Hemlata Deepak",
+                "order": 15,
+                "profile_path": null
+            },
+            {
+                "cast_id": 52,
+                "character": "Simran's Uncle",
+                "credit_id": "57a30d979251410ca8000bca",
+                "gender": 0,
+                "id": 1427907,
+                "name": "Lalit Tiwari",
+                "order": 16,
+                "profile_path": null
+            },
+            {
+                "cast_id": 64,
+                "character": "",
+                "credit_id": "5d6a29f30929f6001645556e",
+                "gender": 0,
+                "id": 1661291,
+                "name": "Baby Raashi",
+                "order": 17,
+                "profile_path": null
+            },
+            {
+                "cast_id": 65,
+                "character": "",
+                "credit_id": "5d6a29f80929f60012455698",
+                "gender": 0,
+                "id": 1661293,
+                "name": "Baby Nupur",
+                "order": 18,
+                "profile_path": null
+            },
+            {
+                "cast_id": 66,
+                "character": "",
+                "credit_id": "5d6a29fe9d8939001000ee6c",
+                "gender": 0,
+                "id": 1661294,
+                "name": "Shanker Iyer",
+                "order": 19,
+                "profile_path": null
+            },
+            {
+                "cast_id": 67,
+                "character": "",
+                "credit_id": "5d6a2a029d8939001200f836",
+                "gender": 0,
+                "id": 2400262,
+                "name": "Rajesh Bhatija",
+                "order": 20,
+                "profile_path": null
+            },
+            {
+                "cast_id": 68,
+                "character": "",
+                "credit_id": "5d6a2a080929f600124556a5",
+                "gender": 0,
+                "id": 1661296,
+                "name": "Govind Khatri",
+                "order": 21,
+                "profile_path": null
+            },
+            {
+                "cast_id": 69,
+                "character": "",
+                "credit_id": "5d6a2a0d9d8939001000ee88",
+                "gender": 0,
+                "id": 1661297,
+                "name": "Mansoor Merchant",
+                "order": 22,
+                "profile_path": null
+            },
+            {
+                "cast_id": 70,
+                "character": "",
+                "credit_id": "5d6a2a119d8939001400f970",
+                "gender": 0,
+                "id": 1661298,
+                "name": "Mohit Kumar",
+                "order": 23,
+                "profile_path": null
+            },
+            {
+                "cast_id": 71,
+                "character": "",
+                "credit_id": "5d6a2a277776f00012737e77",
+                "gender": 0,
+                "id": 1661300,
+                "name": "Damyanti Puri",
+                "order": 24,
+                "profile_path": null
+            },
+            {
+                "cast_id": 73,
+                "character": "Guest in the song Mehendi Laga Ke Rakhna (uncredited)",
+                "credit_id": "5d6a2a8c7776f0000f738808",
+                "gender": 0,
+                "id": 2400263,
+                "name": "Surendra Rahi",
+                "order": 25,
+                "profile_path": null
+            }
+        ],
+        "crew": [
+            {
+                "credit_id": "57a3054a9251417c57000d7a",
+                "department": "Crew",
+                "gender": 1,
+                "id": 8311,
+                "job": "Choreographer",
+                "name": "Farah Khan",
+                "profile_path": "/l0jw1cr6WvpjF2grO1JBqUOBcEx.jpg"
+            },
+            {
+                "credit_id": "57a304a39251410cd20008a5",
+                "department": "Production",
+                "gender": 2,
+                "id": 35770,
+                "job": "Producer",
+                "name": "Yash Chopra",
+                "profile_path": "/ku55DB8xWKCCf5dflMf03I3Ltto.jpg"
+            },
+            {
+                "credit_id": "57a3042b9251412769000193",
+                "department": "Writing",
+                "gender": 2,
+                "id": 35771,
+                "job": "Screenplay",
+                "name": "Aditya Chopra",
+                "profile_path": "/zEVU7NkHcsZi4gjp2x8GC7pdY6H.jpg"
+            },
+            {
+                "credit_id": "52fe47d69251416c750a71af",
+                "department": "Directing",
+                "gender": 2,
+                "id": 35771,
+                "job": "Director",
+                "name": "Aditya Chopra",
+                "profile_path": "/zEVU7NkHcsZi4gjp2x8GC7pdY6H.jpg"
+            },
+            {
+                "credit_id": "5d6a2a3a7776f0000f7387b8",
+                "department": "Writing",
+                "gender": 2,
+                "id": 35771,
+                "job": "Dialogue",
+                "name": "Aditya Chopra",
+                "profile_path": "/zEVU7NkHcsZi4gjp2x8GC7pdY6H.jpg"
+            },
+            {
+                "credit_id": "57a30453c3a3682fa700493f",
+                "department": "Writing",
+                "gender": 2,
+                "id": 35771,
+                "job": "Story",
+                "name": "Aditya Chopra",
+                "profile_path": "/zEVU7NkHcsZi4gjp2x8GC7pdY6H.jpg"
+            },
+            {
+                "credit_id": "57a304c1c3a368295b000dbb",
+                "department": "Art",
+                "gender": 1,
+                "id": 35740,
+                "job": "Art Direction",
+                "name": "Sharmishta Roy",
+                "profile_path": "/qCCd7KVlZzV1xxFoq9s6amiqSPF.jpg"
+            },
+            {
+                "credit_id": "5ca568780e0a265bd6b4e919",
+                "department": "Costume & Make-Up",
+                "gender": 2,
+                "id": 35736,
+                "job": "Costume Design",
+                "name": "Karan Johar",
+                "profile_path": "/zip1x7OXOBxXxcdYvKOgw6MnAWm.jpg"
+            },
+            {
+                "credit_id": "57a304969251410cd20008a2",
+                "department": "Production",
+                "gender": 2,
+                "id": 69709,
+                "job": "Associate Producer",
+                "name": "Uday Chopra",
+                "profile_path": "/dE8SJ1In3L5zHeVOB91LBJXmtN3.jpg"
+            },
+            {
+                "credit_id": "59133e4e9251414eca0549ff",
+                "department": "Sound",
+                "gender": 0,
+                "id": 70849,
+                "job": "Music Director",
+                "name": "Jatin Pandit",
+                "profile_path": null
+            },
+            {
+                "credit_id": "5b34ebb59251413cab01b500",
+                "department": "Camera",
+                "gender": 2,
+                "id": 82079,
+                "job": "Director of Photography",
+                "name": "Manmohan Singh",
+                "profile_path": null
+            },
+            {
+                "credit_id": "59133d719251414e89059263",
+                "department": "Sound",
+                "gender": 1,
+                "id": 108938,
+                "job": "Playback Singer",
+                "name": "Asha Bhosle",
+                "profile_path": "/vOIKyZIMNHYkeOeGNxEqq2vKc5A.jpg"
+            },
+            {
+                "credit_id": "59133e219251414ead053d34",
+                "department": "Sound",
+                "gender": 2,
+                "id": 133179,
+                "job": "Music Director",
+                "name": "Lalit Pandit",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a3043c9251410c7d000919",
+                "department": "Writing",
+                "gender": 2,
+                "id": 146970,
+                "job": "Dialogue",
+                "name": "Javed Siddiqui",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304739251417c57000d4c",
+                "department": "Editing",
+                "gender": 0,
+                "id": 565173,
+                "job": "Editor",
+                "name": "Keshav Naidu",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a30566c3a368295b000de4",
+                "department": "Sound",
+                "gender": 0,
+                "id": 927644,
+                "job": "Songs",
+                "name": "Anand Bakshi",
+                "profile_path": null
+            },
+            {
+                "credit_id": "59133d9f9251414e85057bf2",
+                "department": "Sound",
+                "gender": 2,
+                "id": 1113618,
+                "job": "Playback Singer",
+                "name": "Udit Narayan",
+                "profile_path": "/2LYPkxyTqlIluiKzYnDMgM5o1Wq.jpg"
+            },
+            {
+                "credit_id": "59133daa9251414e890592b7",
+                "department": "Sound",
+                "gender": 2,
+                "id": 1113619,
+                "job": "Playback Singer",
+                "name": "Kumar Sanu",
+                "profile_path": "/sD1EDhA8vXiFPfvgY5JBo9Ym1ip.jpg"
+            },
+            {
+                "credit_id": "57a30553c3a3683fa7000a8a",
+                "department": "Crew",
+                "gender": 0,
+                "id": 1148398,
+                "job": "Choreographer",
+                "name": "Saroj Khan",
+                "profile_path": null
+            },
+            {
+                "credit_id": "59133d959251414edb0584a9",
+                "department": "Sound",
+                "gender": 1,
+                "id": 1608033,
+                "job": "Playback Singer",
+                "name": "Lata Mangeshkar",
+                "profile_path": "/1JgCDCQpi3KIasQykS3Bd0IHGpp.jpg"
+            },
+            {
+                "credit_id": "57a3048cc3a3682fa700494d",
+                "department": "Production",
+                "gender": 0,
+                "id": 1661254,
+                "job": "Associate Producer",
+                "name": "Pamela Chopra",
+                "profile_path": null
+            },
+            {
+                "credit_id": "59133ddb9251414e85057c4c",
+                "department": "Sound",
+                "gender": 0,
+                "id": 1661254,
+                "job": "Playback Singer",
+                "name": "Pamela Chopra",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304b7c3a36829a4000f1c",
+                "department": "Production",
+                "gender": 0,
+                "id": 1661255,
+                "job": "Executive Producer",
+                "name": "Mahen Vakil",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304cb92514127690001d9",
+                "department": "Costume & Make-Up",
+                "gender": 0,
+                "id": 1661256,
+                "job": "Makeup Artist",
+                "name": "Ravi Indulkar",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304d6c3a3686c4a003f8b",
+                "department": "Costume & Make-Up",
+                "gender": 0,
+                "id": 1661257,
+                "job": "Makeup Artist",
+                "name": "Pandhari Juker",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304e19251416b97003cf6",
+                "department": "Costume & Make-Up",
+                "gender": 0,
+                "id": 1661258,
+                "job": "Hairstylist",
+                "name": "Farida Khan",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304ebc3a368295b000dc9",
+                "department": "Costume & Make-Up",
+                "gender": 2,
+                "id": 1661259,
+                "job": "Makeup Artist",
+                "name": "Vinod Rathod",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a304f69251410a5f000926",
+                "department": "Production",
+                "gender": 0,
+                "id": 1661260,
+                "job": "Production Manager",
+                "name": "Balakrishnan Iyer",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a30521c3a3683f9700085c",
+                "department": "Art",
+                "gender": 0,
+                "id": 1661261,
+                "job": "Assistant Art Director",
+                "name": "Mohammed Kasim",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a3052b9251410c7d00095c",
+                "department": "Sound",
+                "gender": 0,
+                "id": 1661262,
+                "job": "Sound Re-Recording Mixer",
+                "name": "Arunkumar Bose",
+                "profile_path": null
+            },
+            {
+                "credit_id": "57a3053b9251410d2c000928",
+                "department": "Costume & Make-Up",
+                "gender": 0,
+                "id": 1661263,
+                "job": "Costume Design",
+                "name": "Shashikant Shellar",
+                "profile_path": null
+            },
+            {
+                "credit_id": "5d6a2aaf9d8939001200f923",
+                "department": "Sound",
+                "gender": 0,
+                "id": 2400265,
+                "job": "Playback Singer",
+                "name": "Ajay Trivedi",
+                "profile_path": null
+            }
+        ]
+    }
 }
