@@ -3,6 +3,11 @@
 ## Challenge
 The description about the challenge is on the following link: https://docs.google.com/document/d/18umKKAJbZXVianUw4nVIqPYXtXjyIKT6fRAcBhSZ9BA/edit#
 
+## Screenshots
+
+![alt Main List](https://github.com/SiqueiraYris/MovieDB/blob/development/Screenshots/list.png "Main List")
+![alt Detail](https://github.com/SiqueiraYris/MovieDB/blob/development/Screenshots/detail.png "Detail")
+
 
 ## Project Architecture
 
