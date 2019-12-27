@@ -54,7 +54,11 @@ final class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.isNavigationBarHidden = true
+        
+        view.createGradientBackground(firstColor: UIColor.william.cgColor,
+        secondColor: UIColor.nordic.cgColor)
     }
     
     // MARK: - Setup Status Bar

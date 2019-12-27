@@ -47,6 +47,9 @@ final class MoviesViewController: UIViewController {
         
         self.title = "Top Movies"
         
+        view.createGradientBackground(firstColor: UIColor.william.cgColor,
+        secondColor: UIColor.nordic.cgColor)
+        
         setupNavigation()
     }
     
@@ -65,8 +68,6 @@ final class MoviesViewController: UIViewController {
         self.navigationController?.view.backgroundColor = .nordic
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        view.createGradientBackground(firstColor: UIColor.william.cgColor,
-                                      secondColor: UIColor.nordic.cgColor)
     }
     
 }
