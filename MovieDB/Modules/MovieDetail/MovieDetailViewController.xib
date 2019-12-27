@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="backView" destination="156-xX-YGR" id="QcN-ik-fl4"/>
                 <outlet property="castCollectionView" destination="pGF-M5-Yex" id="RNa-Zd-vtp"/>
+                <outlet property="castLabel" destination="2qc-La-nel" id="5Fm-nz-ja4"/>
                 <outlet property="contentView" destination="Tdm-TX-T0l" id="vad-2h-O18"/>
                 <outlet property="loader" destination="EUm-ar-fXW" id="1sJ-2D-aw0"/>
                 <outlet property="movieBanner" destination="VUO-VT-qX3" id="fcS-tu-yBP"/>

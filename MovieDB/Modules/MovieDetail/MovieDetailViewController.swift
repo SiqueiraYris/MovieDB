@@ -27,6 +27,7 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieRating: UILabel!
     @IBOutlet weak var movieImages: ImageSlideshow!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var castLabel: UILabel!
     @IBOutlet weak var backView: UIView! {
         didSet {
             let tap = UITapGestureRecognizer(target: self, action: #selector(didTapBack(_:)))
@@ -111,6 +112,7 @@ extension MovieDetailViewController {
         movieMainImage.isHidden = hidden
         movieDuration.isHidden = hidden
         movieImages.isHidden = hidden
+        castLabel.isHidden = hidden
         castCollectionView.isHidden = hidden
     }
     
