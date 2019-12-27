@@ -27,6 +27,12 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var movieImages: ImageSlideshow!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var castCollectionView: UICollectionView! {
+        didSet {
+            castCollectionView.dataSource = self
+            setupCollectionCell()
+        }
+    }
     
     // MARK: - Life Cycle
     
@@ -95,30 +101,32 @@ extension MovieDetailViewController {
         movieMainImage.isHidden = hidden
         movieDuration.isHidden = hidden
         movieImages.isHidden = hidden
+        castCollectionView.isHidden = hidden
     }
     
     // MARK: - Binds
     
     func bindUI() {
-        movieTitle.text = viewModel?.movie.title
-        movieOverview.text = viewModel?.movie.overview
-        movieRating.text = viewModel?.movie.voteAverage.description
+        movieTitle.text = viewModel?.movie?.title
+        movieOverview.text = viewModel?.movie?.overview
+        movieRating.text = viewModel?.movie?.voteAverage.description
         
-        if let time = viewModel?.movie.runtime {
+        if let time = viewModel?.movie?.runtime {
             movieDuration.text = Date().convertDate(date: time)
         }
         
-        if let image = viewModel?.movie.posterPath {
+        if let image = viewModel?.movie?.posterPath {
             movieMainImage.download(image: image)
             movieMainImage.addRoundedBorder(radious: 5.0, color: UIColor.caribbeanGreen.cgColor)
         }
         
-        if let banner = viewModel?.movie.backdropPath {
+        if let banner = viewModel?.movie?.backdropPath {
             movieBanner.download(image: banner)
         }
         
         DispatchQueue.main.async {
             self.configureImageSlider()
+            self.castCollectionView.reloadData()
         }
         
         movieRatingView.roundCorners(radious: 10.0)
@@ -140,4 +148,34 @@ extension MovieDetailViewController {
         movieImages.setImageInputs(sources)
     }
     
+    func setupCollectionCell() {
+        let nib = UINib(nibName: "CastCollectionViewCell", bundle: nil)
+        castCollectionView?.register(nib, forCellWithReuseIdentifier: CastCollectionViewCell.identifier)
+        
+        if let flowLayout = self.castCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.itemSize = CGSize(width: 120.0, height: 135.0)
+        }
+    }
+    
+}
+
+// MARK: - Collection View Data Source
+
+extension MovieDetailViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel?.movie?.credits?.cast?.count ?? 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CastCollectionViewCell.identifier,
+                                                         for: indexPath) as? CastCollectionViewCell, let cast = viewModel?.movie?.credits?.cast {
+            let cellViewModel = CastCellViewModel(with: cast[indexPath.row])
+            cell.configure(with: cellViewModel)
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
+
 }

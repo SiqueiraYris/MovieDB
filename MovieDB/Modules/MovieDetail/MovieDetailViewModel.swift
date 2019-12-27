@@ -12,7 +12,7 @@ import ImageSlideshow
 // MARK: - View Model Protocol
 
 protocol MovieDetailViewModelProtocol {
-    var movie: MovieDetail! { get }
+    var movie: MovieDetail? { get }
     var images: [Backdrop] { get }
     var delegate: MovieDetailViewModelDelegate? { get set }
     
@@ -35,7 +35,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     private let interactor: MovieDetailInteractorProtocol
     private var movieId: Int
     
-    var movie: MovieDetail!
+    var movie: MovieDetail?
     var images: [Backdrop] = []
     var delegate: MovieDetailViewModelDelegate?
     
