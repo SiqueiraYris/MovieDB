@@ -39,6 +39,9 @@ final class MoviesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        self.navigationController?.isNavigationBarHidden = false
+        
         viewModel?.fetchMovies()
     }
     

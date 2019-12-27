@@ -17,6 +17,7 @@ final class MovieDetailViewController: UIViewController {
 
     // MARK: - Outlets
     
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var movieBanner: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDuration: UILabel!
@@ -24,9 +25,14 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieOverview: UITextView!
     @IBOutlet weak var movieRatingView: UIView!
     @IBOutlet weak var movieRating: UILabel!
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var movieImages: ImageSlideshow!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var backView: UIView! {
+        didSet {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(didTapBack(_:)))
+            backView.addGestureRecognizer(tap)
+        }
+    }
     @IBOutlet weak var castCollectionView: UICollectionView! {
         didSet {
             castCollectionView.dataSource = self
@@ -57,7 +63,7 @@ final class MovieDetailViewController: UIViewController {
         
         self.navigationController?.isNavigationBarHidden = true
         
-        view.createGradientBackground(firstColor: UIColor.william.cgColor,
+        contentView.createGradientBackground(firstColor: UIColor.william.cgColor,
         secondColor: UIColor.nordic.cgColor)
     }
     
@@ -67,9 +73,9 @@ final class MovieDetailViewController: UIViewController {
         return .lightContent
     }
     
-    // MARK: - IB Actions
+    // MARK: - Handle With Gesture
     
-    @IBAction func didTapBackButton(_ sender: UIButton) {
+     @objc func didTapBack(_ sender: UITapGestureRecognizer? = nil) {
         viewModel?.goBack()
     }
     
@@ -157,7 +163,7 @@ extension MovieDetailViewController {
         castCollectionView?.register(nib, forCellWithReuseIdentifier: CastCollectionViewCell.identifier)
         
         if let flowLayout = self.castCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.itemSize = CGSize(width: 120.0, height: 135.0)
+            flowLayout.itemSize = CGSize(width: 120.0, height: 140.0)
         }
     }
     
