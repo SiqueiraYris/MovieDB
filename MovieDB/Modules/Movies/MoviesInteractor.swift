@@ -32,6 +32,7 @@ final class MoviesInteractor: API, MoviesInteractorProtocol {
            "api_key": serviceKey
         ]
         params["page"] = "\(currentPage)"
+        params["language"] = "pt-BR"
 
         request(queryParams: params, urlPath: "\(path)/movie/top_rated") { response in
             switch response {

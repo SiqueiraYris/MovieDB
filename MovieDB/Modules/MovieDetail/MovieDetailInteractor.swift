@@ -29,6 +29,7 @@ final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
            "api_key": serviceKey
         ]
         params["append_to_response"] = "credits"
+        params["language"] = "pt-BR"
 
         request(queryParams: params, urlPath: "\(path)/movie/\(id)") { response in
             switch response {
