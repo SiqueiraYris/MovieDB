@@ -25,9 +25,10 @@ final class MovieDetailInteractor: API, MovieDetailInteractorProtocol {
     // MARK: - Fetch Data
     
     func fetchMovieDetailById(id: Int, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
-        let params = [
+        var params = [
            "api_key": serviceKey
         ]
+        params["append_to_response"] = "credits"
 
         request(queryParams: params, urlPath: "\(path)/movie/\(id)") { response in
             switch response {

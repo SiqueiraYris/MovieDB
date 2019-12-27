@@ -23,6 +23,7 @@ class MovieDetail: Codable {
     let runtime: Int
     let voteAverage: Double
     let voteCount: Int
+    let credits: Credits?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,6 +31,7 @@ class MovieDetail: Codable {
         case runtime
         case title
         case overview
+        case credits
         case backdropPath = "backdrop_path"
         case imdbID = "imdb_id"
         case posterPath = "poster_path"
@@ -40,7 +42,7 @@ class MovieDetail: Codable {
     
     // MARK: - Initializers
 
-    init(id: Int, adult: Bool, backdropPath: String, imdbID: String, overview: String, posterPath: String, releaseDate: String, runtime: Int, title: String, voteAverage: Double, voteCount: Int) {
+    init(id: Int, adult: Bool, backdropPath: String, imdbID: String, overview: String, posterPath: String, releaseDate: String, runtime: Int, title: String, voteAverage: Double, voteCount: Int, credits: Credits?) {
         self.adult = adult
         self.backdropPath = backdropPath
         self.id = id
@@ -52,6 +54,7 @@ class MovieDetail: Codable {
         self.title = title
         self.voteAverage = voteAverage
         self.voteCount = voteCount
+        self.credits = credits
     }
     
 }
