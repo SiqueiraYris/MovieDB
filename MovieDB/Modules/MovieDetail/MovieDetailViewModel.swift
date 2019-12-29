@@ -21,9 +21,9 @@ protocol MovieDetailViewModelProtocol {
     func createImageSources() -> [KingfisherSource]
 }
 
-// MARK: - View Model Delegate
+// MARK: - View Model Delegater
 
-protocol MovieDetailViewModelDelegate {
+protocol MovieDetailViewModelDelegate: class {
     func fetchMovieDetail(error: Error?)
 }
 
@@ -37,7 +37,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     
     var movie: MovieDetail?
     var images: [Backdrop] = []
-    var delegate: MovieDetailViewModelDelegate?
+    weak var delegate: MovieDetailViewModelDelegate?
     
     // MARK: - Life Cycle
     
@@ -87,7 +87,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
                 sources.append(kfSource)
             }
         }
-        return  sources
+        return sources
     }
     
 }

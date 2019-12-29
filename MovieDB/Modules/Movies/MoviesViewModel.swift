@@ -20,7 +20,7 @@ protocol MoviesViewModelProtocol {
 
 // MARK: - View Model Delegate
 
-protocol MoviesViewModelDelegate {
+protocol MoviesViewModelDelegate: class {
     func fetchMovies(error: Error?)
 }
 
@@ -32,7 +32,7 @@ final class MoviesViewModel: MoviesViewModelProtocol {
     private let interactor: MoviesInteractorProtocol
     
     var movies: [Movie] = []
-    var delegate: MoviesViewModelDelegate?
+    weak var delegate: MoviesViewModelDelegate?
     
     // MARK: - Life Cycle
     
