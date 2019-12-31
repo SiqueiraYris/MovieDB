@@ -28,12 +28,6 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieImages: ImageSlideshow!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var castLabel: UILabel!
-    @IBOutlet weak var backView: UIView! {
-        didSet {
-            let tap = UITapGestureRecognizer(target: self, action: #selector(didTapBack(_:)))
-            backView.addGestureRecognizer(tap)
-        }
-    }
     @IBOutlet weak var castCollectionView: UICollectionView! {
         didSet {
             castCollectionView.dataSource = self
@@ -55,17 +49,19 @@ final class MovieDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         viewModel?.fetchMovieDetail()
+        
         setupUI(hidden: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.isNavigationBarHidden = true
-        
         contentView.createGradientBackground(firstColor: UIColor.william.cgColor,
-        secondColor: UIColor.nordic.cgColor)
+                                             secondColor: UIColor.nordic.cgColor)
+        
+        setupNavigation()
     }
     
     // MARK: - Setup Status Bar
@@ -74,10 +70,15 @@ final class MovieDetailViewController: UIViewController {
         return .lightContent
     }
     
-    // MARK: - Handle With Gesture
+    // MARK: - Setup Navigation Bar
     
-     @objc func didTapBack(_ sender: UITapGestureRecognizer? = nil) {
-        viewModel?.goBack()
+    func setupNavigation() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.view.backgroundColor = .clear
+        self.navigationController?.navigationBar.tintColor = .white
     }
     
 }

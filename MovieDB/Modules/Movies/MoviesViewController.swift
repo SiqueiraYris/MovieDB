@@ -40,20 +40,16 @@ final class MoviesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.navigationController?.isNavigationBarHidden = false
-        
         viewModel?.fetchMovies()
+        
+        setupNavigation()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Top Movies"
-        
         view.createGradientBackground(firstColor: UIColor.william.cgColor,
         secondColor: UIColor.nordic.cgColor)
-        
-        setupNavigation()
     }
     
     // MARK: - Setup Status Bar
@@ -62,9 +58,10 @@ final class MoviesViewController: UIViewController {
         return .lightContent
     }
     
-    // MARK: - Custom Methods
+    // MARK: - Setup Navigation Bar
     
     func setupNavigation() {
+        self.title = "Top Movies"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = .nordic

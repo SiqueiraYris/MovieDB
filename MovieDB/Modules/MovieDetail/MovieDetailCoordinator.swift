@@ -29,10 +29,4 @@ final class MovieDetailCoordinator: Coordinator {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    // MARK: - Navigation
-    
-    func goBack() {
-        navigationController?.popViewController(animated: true)
-    }
-    
 }

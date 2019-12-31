@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieDB" customModuleProvider="target">
             <connections>
-                <outlet property="backView" destination="156-xX-YGR" id="QcN-ik-fl4"/>
                 <outlet property="castCollectionView" destination="pGF-M5-Yex" id="RNa-Zd-vtp"/>
                 <outlet property="castLabel" destination="2qc-La-nel" id="5Fm-nz-ja4"/>
                 <outlet property="contentView" destination="Tdm-TX-T0l" id="vad-2h-O18"/>
@@ -81,7 +80,7 @@
                                     <rect key="frame" x="357" y="253" width="45" height="50"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--movieRating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gul-JM-lIX">
-                                            <rect key="frame" x="-64.5" y="8" width="174.5" height="34"/>
+                                            <rect key="frame" x="-65" y="8" width="175" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -121,33 +120,6 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="156-xX-YGR">
-                                    <rect key="frame" x="4" y="45" width="116" height="34"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="Vtv-ph-azV">
-                                            <rect key="frame" x="0.0" y="0.0" width="29" height="34"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="34" id="LJP-Cs-gch"/>
-                                                <constraint firstAttribute="width" constant="29" id="jd1-ni-3lA"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Movies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aV3-ci-ufT">
-                                            <rect key="frame" x="30" y="6.5" width="87" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="Vtv-ph-azV" firstAttribute="leading" secondItem="156-xX-YGR" secondAttribute="leading" id="6kb-D1-hGm"/>
-                                        <constraint firstAttribute="height" constant="34" id="8Dg-ny-abC"/>
-                                        <constraint firstItem="Vtv-ph-azV" firstAttribute="top" secondItem="156-xX-YGR" secondAttribute="top" id="c7W-F5-6f3"/>
-                                        <constraint firstItem="aV3-ci-ufT" firstAttribute="centerY" secondItem="156-xX-YGR" secondAttribute="centerY" id="gB2-Bi-HfG"/>
-                                        <constraint firstAttribute="width" constant="116" id="gtM-ed-khx"/>
-                                        <constraint firstItem="aV3-ci-ufT" firstAttribute="leading" secondItem="Vtv-ph-azV" secondAttribute="trailing" constant="1" id="rov-Mu-WRO"/>
-                                    </constraints>
-                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.015686274510000001" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -171,21 +143,19 @@
                                 <constraint firstItem="scO-9n-4He" firstAttribute="leading" secondItem="TCE-fz-IBv" secondAttribute="trailing" constant="12" id="Syg-p7-BP9"/>
                                 <constraint firstItem="pGF-M5-Yex" firstAttribute="leading" secondItem="Tdm-TX-T0l" secondAttribute="leading" id="WVo-Vk-OXL"/>
                                 <constraint firstItem="pGF-M5-Yex" firstAttribute="top" secondItem="2qc-La-nel" secondAttribute="bottom" constant="4" id="Zt3-fs-2lL"/>
-                                <constraint firstItem="156-xX-YGR" firstAttribute="leading" secondItem="Tdm-TX-T0l" secondAttribute="leading" constant="4" id="aXi-4L-VR6"/>
                                 <constraint firstAttribute="trailing" secondItem="IW7-gq-rLN" secondAttribute="trailing" constant="20" id="dbv-Ga-FZe"/>
                                 <constraint firstAttribute="trailing" secondItem="VUO-VT-qX3" secondAttribute="trailing" id="iha-5i-AI5"/>
                                 <constraint firstItem="2qc-La-nel" firstAttribute="leading" secondItem="Tdm-TX-T0l" secondAttribute="leading" constant="17" id="jTx-KO-DIN"/>
                                 <constraint firstItem="EUm-ar-fXW" firstAttribute="centerY" secondItem="Tdm-TX-T0l" secondAttribute="centerY" id="m8d-Yx-naN"/>
                                 <constraint firstItem="3u5-1l-7kJ" firstAttribute="top" secondItem="QX0-Da-u0J" secondAttribute="bottom" constant="10" id="nkG-NO-55k"/>
-                                <constraint firstItem="156-xX-YGR" firstAttribute="top" secondItem="Tdm-TX-T0l" secondAttribute="top" constant="45" id="sJz-E5-s8G"/>
                                 <constraint firstItem="QX0-Da-u0J" firstAttribute="leading" secondItem="Tdm-TX-T0l" secondAttribute="leading" constant="17" id="zaF-Xs-vPM"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.015686274510000001" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Tdm-TX-T0l" secondAttribute="trailing" constant="-174" id="F9F-Cn-Uzk"/>
-                        <constraint firstAttribute="bottom" secondItem="Tdm-TX-T0l" secondAttribute="bottom" constant="-690" id="Q8b-qK-qun"/>
+                        <constraint firstAttribute="trailing" secondItem="Tdm-TX-T0l" secondAttribute="trailing" id="F9F-Cn-Uzk"/>
+                        <constraint firstAttribute="bottom" secondItem="Tdm-TX-T0l" secondAttribute="bottom" id="Q8b-qK-qun"/>
                         <constraint firstItem="Ab5-Kh-Q4y" firstAttribute="bottom" secondItem="Tdm-TX-T0l" secondAttribute="bottom" id="il4-c2-Nc4"/>
                         <constraint firstItem="Tdm-TX-T0l" firstAttribute="leading" secondItem="Ab5-Kh-Q4y" secondAttribute="leading" id="oj4-Op-4SG"/>
                         <constraint firstItem="Ab5-Kh-Q4y" firstAttribute="trailing" secondItem="Tdm-TX-T0l" secondAttribute="trailing" id="r60-MK-CUU"/>
@@ -206,7 +176,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </view>
     </objects>
-    <resources>
-        <image name="back" width="256" height="256"/>
-    </resources>
 </document>

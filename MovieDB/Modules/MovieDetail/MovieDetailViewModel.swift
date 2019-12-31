@@ -16,7 +16,6 @@ protocol MovieDetailViewModelProtocol {
     var images: [Backdrop] { get }
     var delegate: MovieDetailViewModelDelegate? { get set }
     
-    func goBack()
     func fetchMovieDetail()
     func createImageSources() -> [KingfisherSource]
 }
@@ -45,12 +44,6 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
         self.coordinator = coordinator
         self.interactor = interactor
         self.movieId = movieId
-    }
-    
-    // MARK: - Navigation
-
-    func goBack() {
-        coordinator?.goBack()
     }
     
     // MARK: - Custom Methods
